@@ -233,6 +233,35 @@ footer a:hover {
   text-decoration: underline;
 }
 
+/* ==== SPOTIFY WIDGET ==== */
+.spotify-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #1db954, #191414); /* Spotify green vibe */
+  color: white;
+  text-align: center;
+}
+.spotify-section h2 {
+  border-bottom-color: #1db954;
+  color: white;
+}
+.spotify-section h2::after {
+  background: #1db954;
+}
+.spotify-widget {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  background: #000;
+}
+.spotify-note {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
 /* ========================================
    RESPONSIVE TWEAKS
    ======================================== */
