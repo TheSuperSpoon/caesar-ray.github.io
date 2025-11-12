@@ -236,16 +236,16 @@ footer a:hover {
 /* ==== SPOTIFY WIDGET ==== */
 .spotify-section {
   padding: 3rem 0;
-  background: linear-gradient(135deg, #1db954, #191414); /* Spotify green vibe */
+  background: linear-gradient(135deg, #2c3e50, #8e44ad); /* ← Blue to Purple */
   color: white;
   text-align: center;
 }
 .spotify-section h2 {
-  border-bottom-color: #1db954;
+  border-bottom-color: #4a90e2; /* ← Blue accent */
   color: white;
 }
 .spotify-section h2::after {
-  background: #1db954;
+  background: #4a90e2; /* ← Blue underline */
 }
 .spotify-widget {
   max-width: 600px;
