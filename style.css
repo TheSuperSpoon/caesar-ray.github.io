@@ -262,6 +262,408 @@ footer a:hover {
   font-style: italic;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f9f9fb;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ========================================
+   LAYOUT CONTAINERS
+   ======================================== */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+              url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, .3);
+  margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: .5rem;
+}
+.hero h1 span {
+  color: #ffd700;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   SECTIONS (About, Intro, Links, etc.)
+   ======================================== */
+section {
+  padding: 3rem 0;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: .5rem;
+  position: relative;
+}
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: #667eea;
+}
+
+/* About */
+.about {
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* ========================================
+   PERSONAL INTRO & PREFERENCES
+   ======================================== */
+.intro-prefs {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+.intro-prefs h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: .5rem;
+}
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #444;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: .8rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  color: #222;
+}
+
+.card ul {
+  list-style: none;
+}
+.card li {
+  padding: .35rem 0;
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: 1rem;
+}
+.card li:before {
+  position: absolute;
+  left: 0;
+  top: .5rem;
+  font-weight: bold;
+}
+
+/* Icons */
+.bands li:before     { content: "🎵"; }
+.likes li:before     { content: "✓"; color: #28a745; }
+.dislikes li:before  { content: "✗"; color: #dc3545; }
+
+/* ========================================
+   SOCIAL LINKS
+   ======================================== */
+.links {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.links ul {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.links li a {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  transition: all 0.2s ease;
+}
+.links li a:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, .3);
+}
+.links li a i {
+  font-size: 1.2em;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #333;
+  color: #ccc;
+  font-size: .9rem;
+  margin-top: 4rem;
+}
+footer a {
+  color: #ffd700;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==== SPOTIFY WIDGET ==== */
+.spotify-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #2c3e50, #8e44ad); /* ← Blue to Purple */
+  color: white;
+  text-align: center;
+}
+.spotify-section h2 {
+  border-bottom-color: #4a90e2; /* ← Blue accent */
+  color: white;
+}
+.spotify-section h2::after {
+  background: #4a90e2; /* ← Blue underline */
+}
+.spotify-widget {
+  max-width: 600px;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,.3);
+  background: #000;
+}
+.spotify-note {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* ========================================
+   RESPONSIVE TWEAKS
+   ======================================== */
+@media (max-width: 600px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .links li a {
+    width: 200px;
+    justify-content: center;
+  }
+}
+
+/* ========================================
+   DARK MODE (Optional toggle later)
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  .card {
+    background: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  }
+  section h2 {
+    border-bottom-color: #333;
+  }
+  a {
+    color: #4da6ff;
+  }
+  footer {
+    background: #000;
+    color: #aaa;
+  }
+}
+
+/* ==== DEXTER QUOTE & PORTRAIT ==== */
+.dexter-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #1a0033, #000);
+  color: #e0e0e0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.dexter-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(0,255,255,0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(255,0,255,0.1) 0%, transparent 50%);
+  pointer-events: none;
+  animation: neonPulse 4s infinite alternate;
+}
+.dexter-quote {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+.dexter-quote blockquote {
+  font-size: 2rem;
+  font-style: italic;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  animation: glitchQuote 3s infinite;
+  position: relative;
+  z-index: 1;
+}
+.dexter-quote strong {
+  color: #fffb00;
+  text-shadow: 0 0 15px #ff00ff;
+}
+.author {
+  font-size: 1.2rem;
+  color: #ffd700;
+  font-weight: 500;
+  z-index: 1;
+}
+.dexter-image {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.dexter-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 40px rgba(0,255,255,0.5);
+  transition: all 0.4s ease;
+}
+.dexter-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(0,255,255,0.8);
+}
+.dexter-image figcaption {
+  margin-top: 1rem;
+  color: #888;
+  font-size: 1rem;
+}
+
+/* Animations */
+@keyframes neonPulse {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+@keyframes glitchQuote {
+  0%, 100% { transform: translate(0); }
+  10% { transform: translate(-1px, 1px); }
+  20% { transform: translate(1px, -1px); }
+  30%, 100% { transform: translate(0); }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .dexter-quote blockquote { font-size: 1.5rem; }
+}
+
 /* ========================================
    RESPONSIVE TWEAKS
    ======================================== */
